@@ -384,6 +384,8 @@ textarea {
 ============= */
 a {
   text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 #main-nav {
@@ -421,8 +423,6 @@ a {
   color: var(--white);
   padding: 20px;
   display: inline-block;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
 }
 #main-nav ul li a:link:hover, #main-nav ul li a:link:active, #main-nav ul li a:visited:hover, #main-nav ul li a:visited:active {
   color: var(--blue);
@@ -523,6 +523,93 @@ header #header-content #main-nav {
 /* =============
     Footer
 ============= */
+#footer-divider {
+  background-color: var(--smoke);
+  height: 1px;
+  width: 100%;
+  margin: 0px 0 48px;
+}
+
+@media (min-width: 1440px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 1440px auto;
+    grid-template-columns: auto 1440px auto;
+        grid-template-areas: "... footer ...";
+  }
+}
+footer #footer-content {
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  footer #footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 1440px) {
+  footer #footer-content {
+    grid-area: footer;
+  }
+}
+@media (min-width: 1440px) {
+  footer #footer-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+footer #footer-content #footer-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer #footer-content #footer-left ul li {
+  margin-right: 16px;
+  margin-top: 16px;
+}
+footer #footer-content #footer-left ul li a:link, footer #footer-content #footer-left ul li a:visited {
+  color: var(--grey);
+  font-size: 1.25rem;
+}
+footer #footer-content #footer-left ul li a:link:hover, footer #footer-content #footer-left ul li a:link:active, footer #footer-content #footer-left ul li a:visited:hover, footer #footer-content #footer-left ul li a:visited:active {
+  color: var(--blue);
+}
+@media (min-width: 768px) {
+  footer #footer-content #footer-right {
+    margin-left: auto;
+  }
+}
+footer #footer-content #footer-right h5 {
+  color: var(--white);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+@media (min-width: 768px) {
+  footer #footer-content #footer-right h5 {
+    margin-top: 0;
+  }
+}
+footer #footer-content #footer-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer #footer-content #footer-right ul li {
+  margin-right: 8px;
+}
+footer #footer-content #footer-right ul li a:link, footer #footer-content #footer-right ul li a:visited {
+  color: var(--grey);
+  font-size: 0.875rem;
+}
+footer #footer-content #footer-right ul li a:link:hover, footer #footer-content #footer-right ul li a:link:active, footer #footer-content #footer-right ul li a:visited:hover, footer #footer-content #footer-right ul li a:visited:active {
+  color: var(--blue);
+}
+footer #footer-content #footer-right #sub-nav {
+  margin-top: 16px;
+}
+
 /* =============
     Blue Bar
 ============= */
