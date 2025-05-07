@@ -316,6 +316,9 @@ template {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --blue: #0D99FF;
+  --grey: #91A6B6;
+  --smoke: #182026;
 }
 
 /* ---------------- Font Sizing ---------------- */
@@ -327,6 +330,10 @@ html {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* =============
     Buttons
 ============= */
