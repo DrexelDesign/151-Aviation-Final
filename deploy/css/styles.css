@@ -327,11 +327,33 @@ html {
 }
 
 /* ---------------- Media Queries ---------------- */
+body {
+  background-color: var(--black);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
 /* =============
     Typography
 ============= */
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
 
 /* =============
@@ -360,9 +382,187 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
+#main-nav {
+  background-color: var(--black);
+  display: none;
+}
+@media (min-width: 768px) {
+  #main-nav {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+#main-nav ul li {
+  text-align: right;
+  border-bottom: 1px solid var(--smoke);
+}
+@media (min-width: 768px) {
+  #main-nav ul li {
+    border-bottom: none;
+  }
+}
+#main-nav ul li a:link, #main-nav ul li a:visited {
+  color: var(--white);
+  padding: 20px;
+  display: inline-block;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+#main-nav ul li a:link:hover, #main-nav ul li a:link:active, #main-nav ul li a:visited:hover, #main-nav ul li a:visited:active {
+  color: var(--blue);
+}
+
 /* =============
     Header
 ============= */
+@media (min-width: 1440px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 1440px auto;
+    grid-template-columns: auto 1440px auto;
+        grid-template-areas: "... hc ...";
+  }
+}
+header #header-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% auto;
+  grid-template-columns: 50% auto;
+      grid-template-areas: "logo burger" "nav nav";
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  header #header-content {
+    -ms-grid-columns: 25% auto;
+    grid-template-columns: 25% auto;
+        grid-template-areas: "logo nav";
+  }
+}
+@media (min-width: 1440px) {
+  header #header-content {
+    grid-area: hc;
+  }
+}
+@media (min-width: 1440px) {
+  header #header-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+header #header-content #burger-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: burger;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 768px) {
+  header #header-content #burger-container {
+    display: none;
+  }
+}
+header #header-content #burger-container button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+header #header-content #logo-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #header-content #main-nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+}
+@media (min-width: 768px) {
+  header #header-content #logo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  header #header-content #main-nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+}
+
 /* =============
     Footer
 ============= */
+/* =============
+    Blue Bar
+============= */
+#blue-bar {
+  background-color: var(--blue);
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  #blue-bar div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+#blue-bar div h4 {
+  margin-bottom: 4px;
+}
+@media (min-width: 768px) {
+  #blue-bar div h4 {
+    margin-bottom: 0;
+    margin-right: 4px;
+  }
+}
+#blue-bar div h5 {
+  font-weight: 500;
+}
+#blue-bar button {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.25rem;
+}
