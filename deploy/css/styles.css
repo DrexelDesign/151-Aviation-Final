@@ -359,6 +359,23 @@ h1, h2, h3, h4, h5, h6 {
 /* =============
     Buttons
 ============= */
+button {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.blue-btn {
+  color: var(--black);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: var(--blue);
+}
+.blue-btn:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
 /* =============
     Forms
 ============= */
@@ -652,6 +669,81 @@ footer #footer-content #footer-right #sub-nav {
   background-color: transparent;
   color: var(--white);
   font-size: 1.25rem;
+}
+
+/* =============
+    Subscribe
+============= */
+#subscribe {
+  padding: 36px 0;
+}
+@media (min-width: 768px) {
+  #subscribe {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 60vw auto;
+    grid-template-columns: auto 60vw auto;
+        grid-template-areas: ". sub .";
+    padding: 48px 0;
+  }
+}
+@media (min-width: 992px) {
+  #subscribe {
+    -ms-grid-columns: auto 50vw auto;
+    grid-template-columns: auto 50vw auto;
+    padding: 52px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #subscribe {
+    -ms-grid-columns: auto 40vw auto;
+    grid-template-columns: auto 40vw auto;
+    padding: 60px 0;
+  }
+}
+@media (min-width: 1440px) {
+  #subscribe {
+    -ms-grid-columns: auto 30vw auto;
+    grid-template-columns: auto 30vw auto;
+  }
+}
+#subscribe #subscribe-content {
+  color: var(--white);
+  padding: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #subscribe #subscribe-content {
+    grid-area: sub;
+  }
+}
+@media (min-width: 768px) {
+  #subscribe #subscribe-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+#subscribe #subscribe-content p {
+  margin: 16px 0;
+}
+#subscribe #subscribe-content form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#subscribe #subscribe-content form div input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  padding: 16px 8px;
+  background-color: var(--smoke);
+  border-radius: 8px;
+  margin-right: 8px;
+  color: var(--white);
+}
+#subscribe #subscribe-content form div button {
+  margin-left: auto;
 }
 
 /* =============

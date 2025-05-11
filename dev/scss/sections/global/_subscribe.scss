@@ -1,0 +1,69 @@
+/* =============
+    Subscribe
+============= */
+@use "../../helpers";
+
+#subscribe{
+
+    padding: 36px 0;
+
+    @include helpers.md{
+        display: grid;
+        grid-template-columns: auto 60vw auto;
+        grid-template-areas: ". sub .";
+        padding: 48px 0;
+    }
+
+    @include helpers.lg{
+        grid-template-columns: auto 50vw auto;
+        padding: 52px 0;
+    }
+
+    @include helpers.xl{
+        grid-template-columns: auto 40vw auto;
+        padding: 60px 0;
+    }
+
+    @include helpers.xxl{
+        grid-template-columns: auto 30vw auto;
+    }
+
+    #subscribe-content{
+        color: var(--white);
+        padding: 16px;
+        text-align: center;
+
+        @include helpers.md{
+            grid-area: sub;
+        }
+
+        h2{
+
+        }
+
+        p{
+            margin: 16px 0;
+        }
+
+        form{
+            div{
+                display: flex;
+                input{
+                    width: 100%;
+                    box-sizing: border-box;
+                    border: none;
+                    padding: 16px 8px;
+                    background-color: var(--smoke);
+                    border-radius: 8px;
+                    margin-right: 8px;
+                    color: var(--white);
+                }
+
+                button{
+                    margin-left: auto;
+                }
+            }
+        }
+
+    }
+}

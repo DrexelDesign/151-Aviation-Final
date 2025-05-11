@@ -1,3 +1,20 @@
 /* =============
     Buttons
 ============= */
+button{
+    transition: 0.25s;
+}
+
+
+.blue-btn{
+    color: var(--black);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: var(--blue);
+
+    &:hover{
+        background-color: var(--white);
+        color: var(--blue);
+    }
+}
