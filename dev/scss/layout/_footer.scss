@@ -1,0 +1,92 @@
+/* =============
+    Footer
+============= */
+@use "../helpers";
+
+#footer-divider{
+    background-color: var(--smoke);
+    height: 1px;
+    width: 100%;
+    margin: 0px 0 48px;
+}
+
+footer{
+   
+
+    @include helpers.xxl{
+        display: grid;
+        grid-template-columns: auto 1440px auto;
+        grid-template-areas: "... footer ...";
+    }
+
+    #footer-content{
+        padding: 16px;
+
+        @include helpers.md{
+            display: flex;
+        }
+
+        @include helpers.xxl{
+            grid-area: footer;
+        }
+
+        #footer-left{
+            ul{
+                display: flex;
+
+                li{
+                    margin-right: 16px;
+                    margin-top: 16px;
+                    a:link, a:visited{
+
+                        color: var(--grey);
+                        font-size: helpers.rem-calc(20);
+                        
+                        &:hover, &:active{
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer-right{
+
+            @include helpers.md{
+                margin-left: auto;
+            }
+
+            h5{
+                color: var(--white);
+                margin-top: 24px;
+                margin-bottom: 8px;
+
+                @include helpers.md{
+                    margin-top: 0;
+                }
+            }
+
+            ul{
+                display: flex;
+
+                li{
+                    margin-right: 8px;
+                    a:link, a:visited{
+
+                        color: var(--grey);
+                        font-size: helpers.rem-calc(14);
+                        
+                        &:hover, &:active{
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+
+            #sub-nav{
+                margin-top: 16px;
+            }
+        }
+
+    }
+}
