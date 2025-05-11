@@ -748,6 +748,10 @@ footer #footer-content #footer-right #sub-nav {
   background-size: cover;
   border-radius: 8px;
 }
+#gallery-container ul li a {
+  height: 100%;
+  width: 100%;
+}
 #gallery-container ul #g1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;

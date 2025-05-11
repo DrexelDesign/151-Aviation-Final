@@ -14,8 +14,6 @@
         grid-template-areas: "... gallery ...";
     }
     
-
-
     ul{
 
         display: grid;
@@ -51,6 +49,11 @@
             display: flex;
             background-size: cover;
             border-radius: 8px;
+
+            a{
+                height: 100%;
+                width: 100%;
+            }
         }
 
         #g1{
