@@ -4,6 +4,15 @@
 @use "../../helpers";
 
 
+/* =============
+    FancyBox Styles
+============= */
+
+.fancybox__backdrop {
+    // background-color: var(--blue) !important;
+}
+
+
 #gallery-container{
 
     padding: 28px 16px;
@@ -51,6 +60,11 @@
             display: flex;
             background-size: cover;
             border-radius: 8px;
+
+            a{
+                height: 100%;
+                width: 100%;
+            }
         }
 
         #g1{

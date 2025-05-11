@@ -694,6 +694,9 @@ footer #footer-content #footer-right #sub-nav {
 /* =============
     Gallery Gallery
 ============= */
+/* =============
+    FancyBox Styles
+============= */
 #gallery-container {
   padding: 28px 16px;
 }
@@ -747,6 +750,10 @@ footer #footer-content #footer-right #sub-nav {
   display: flex;
   background-size: cover;
   border-radius: 8px;
+}
+#gallery-container ul li a {
+  height: 100%;
+  width: 100%;
 }
 #gallery-container ul #g1 {
   -ms-grid-row: 1;
