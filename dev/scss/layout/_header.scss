@@ -38,7 +38,7 @@ header{
                 display: none;
             }
     
-            button{
+            .burger-btns{
                 border: none;
                 background-color: transparent;
                 color: var(--white);
@@ -58,6 +58,22 @@ header{
     
         #main-nav{
             grid-area: nav;
+
+            #close-takeover-btn{
+
+                position: absolute;
+                top: 24px;
+                right: 24px;
+
+                border: none;
+                background-color: transparent;
+                color: var(--white);
+                font-size: helpers.rem-calc(20);
+
+                @include helpers.md{
+                    display: none;
+                }
+            }
         }
     }
 }

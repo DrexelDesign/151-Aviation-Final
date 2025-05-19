@@ -1,6 +1,8 @@
 /* =============
     Buttons
 ============= */
+@use "../helpers";
+
 button{
     transition: 0.25s;
     cursor: pointer;
@@ -18,4 +20,11 @@ button{
         background-color: var(--white);
         color: var(--blue);
     }
+}
+
+.burger-btns{
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    font-size: helpers.rem-calc(20);
 }

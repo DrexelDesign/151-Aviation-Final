@@ -32,6 +32,8 @@ function hideBlueBar(){
 					Burger Menu
 ------------------------------------------------------ */
 
+
+/* --------- remove this comment to use burger menu
 var burgerBtn = document.querySelector("#burger-btn");
 var mainNav = document.querySelector("#main-nav");
 var closeMainNav = document.querySelector("#close-main-nav-btn");
@@ -63,4 +65,29 @@ function closeMobileMenu(){
 	// hide close button
 	closeMainNav.style.display = "none";
 
+}
+ remove this comment to use burger menu ---- */
+
+/* ------------------------------------------------------
+					Takeover Menu
+------------------------------------------------------ */
+
+
+var burgerBtn = document.querySelector("#burger-btn");
+var mainNav = document.querySelector("#main-nav");
+var closeTakeoverBtn = document.querySelector("#close-takeover-btn");
+
+burgerBtn.addEventListener("click", openTakeoverMenu);
+closeTakeoverBtn.addEventListener("click", closeTakeoverMenu);
+
+function openTakeoverMenu(){
+	// console.log("burger button pressed");
+
+	// show mobile menu
+	mainNav.style.display = "flex";
+}
+
+function closeTakeoverMenu(){
+	// hide mobile menu
+	mainNav.style.display = "none";
 }

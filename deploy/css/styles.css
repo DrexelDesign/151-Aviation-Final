@@ -377,6 +377,13 @@ button {
   color: var(--blue);
 }
 
+.burger-btns {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
 /* =============
     Forms
 ============= */
@@ -409,12 +416,30 @@ a {
 #main-nav {
   background-color: var(--blue);
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 100;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (min-width: 768px) {
   #main-nav {
     display: block;
     background-color: var(--black);
+    position: static !important;
+    padding: 0;
+    height: auto;
   }
+}
+#main-nav ul {
+  width: 100%;
 }
 @media (min-width: 768px) {
   #main-nav ul {
@@ -444,7 +469,12 @@ a {
   display: inline-block;
 }
 #main-nav ul li a:link:hover, #main-nav ul li a:link:active, #main-nav ul li a:visited:hover, #main-nav ul li a:visited:active {
-  color: var(--blue);
+  color: var(--black);
+}
+@media (min-width: 768px) {
+  #main-nav ul li a:link:hover, #main-nav ul li a:link:active, #main-nav ul li a:visited:hover, #main-nav ul li a:visited:active {
+    color: var(--blue);
+  }
 }
 
 /* =============
@@ -504,7 +534,7 @@ header #header-content #burger-container {
     display: none;
   }
 }
-header #header-content #burger-container button {
+header #header-content #burger-container .burger-btns {
   border: none;
   background-color: transparent;
   color: var(--white);
@@ -539,6 +569,20 @@ header #header-content #main-nav {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
+  }
+}
+header #header-content #main-nav #close-takeover-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  header #header-content #main-nav #close-takeover-btn {
+    display: none;
   }
 }
 

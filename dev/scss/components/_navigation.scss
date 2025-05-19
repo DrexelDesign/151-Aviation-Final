@@ -12,13 +12,28 @@ a{
 #main-nav{
     background-color: var(--blue);
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    z-index: 100;
+
+    // display: flex;
+    align-items: center;
 
     @include helpers.md{
         display: block;
         background-color: var(--black);
+        position: static !important;
+        padding: 0;
+        height: auto;
     }
 
     ul{
+        width: 100%;
         @include helpers.md{
             display: flex;
             justify-content: flex-end;
@@ -39,7 +54,11 @@ a{
                 display: inline-block;
                 
                 &:hover, &:active{
-                    color: var(--blue);
+                    color: var(--black);
+
+                    @include helpers.md{
+                        color: var(--blue);
+                    }
                 }
             }
         }
