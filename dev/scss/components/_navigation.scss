@@ -10,11 +10,12 @@ a{
 }
 
 #main-nav{
-    background-color: var(--black);
+    background-color: var(--blue);
     display: none;
 
     @include helpers.md{
         display: block;
+        background-color: var(--black);
     }
 
     ul{

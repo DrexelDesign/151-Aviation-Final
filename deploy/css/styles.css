@@ -362,6 +362,7 @@ h1, h2, h3, h4, h5, h6 {
 button {
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  cursor: pointer;
 }
 
 .blue-btn {
@@ -406,12 +407,13 @@ a {
 }
 
 #main-nav {
-  background-color: var(--black);
+  background-color: var(--blue);
   display: none;
 }
 @media (min-width: 768px) {
   #main-nav {
     display: block;
+    background-color: var(--black);
   }
 }
 @media (min-width: 768px) {
@@ -507,6 +509,9 @@ header #header-content #burger-container button {
   background-color: transparent;
   color: var(--white);
   font-size: 1.25rem;
+}
+header #header-content #burger-container #close-main-nav-btn {
+  display: none;
 }
 header #header-content #logo-container {
   -ms-grid-row: 1;
@@ -669,6 +674,9 @@ footer #footer-content #footer-right #sub-nav {
   background-color: transparent;
   color: var(--white);
   font-size: 1.25rem;
+}
+#blue-bar button:hover {
+  color: var(--black);
 }
 
 /* =============

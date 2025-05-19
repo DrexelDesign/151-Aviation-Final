@@ -38,5 +38,9 @@
         background-color: transparent;
         color: var(--white);
         font-size: helpers.rem-calc(20);
+
+        &:hover{
+            color: var(--black);
+        }
     }
 }
