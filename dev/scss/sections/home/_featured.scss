@@ -1,0 +1,65 @@
+/* =============
+    Home Featured
+============= */
+@use "../../helpers";
+
+
+#featuered{
+    padding: 24px;
+
+    #featuered-wrapper{
+
+        @include helpers.xl{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1{
+            color: var(--white);
+            margin-bottom: 28px;
+            
+        }
+            ul{
+                display: grid;
+                gap: 24px;
+
+                @include helpers.md{
+                    grid-template-columns: 50% auto;
+                }
+
+                @include helpers.lg{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                
+                
+
+                li{
+                    background-color: var(--smoke);
+                    padding: 16px;
+                    border-radius: 20px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    a:link, a:visited{
+
+                    h4{
+                        color: var(--white);
+                        font-size: helpers.rem-calc(20);
+                        font-weight: 500;
+                    }
+
+                    img{
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+
+                    &:hover, &:active{
+                        h4{
+                            color: var(--blue);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

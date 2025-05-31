@@ -354,6 +354,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+  font-family: "Outfit", sans-serif;
 }
 
 /* =============
@@ -1082,4 +1083,58 @@ footer #footer-content #footer-right #sub-nav {
 }
 #home-hero #home-hero-wrapper img {
   width: 100%;
+}
+
+/* =============
+    Home Featured
+============= */
+#featuered {
+  padding: 24px;
+}
+@media (min-width: 1200px) {
+  #featuered #featuered-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+#featuered #featuered-wrapper h1 {
+  color: var(--white);
+  margin-bottom: 28px;
+}
+#featuered #featuered-wrapper ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  #featuered #featuered-wrapper ul {
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+  }
+}
+@media (min-width: 992px) {
+  #featuered #featuered-wrapper ul {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#featuered #featuered-wrapper ul li {
+  background-color: var(--smoke);
+  padding: 16px;
+  border-radius: 20px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#featuered #featuered-wrapper ul li a:link h4, #featuered #featuered-wrapper ul li a:visited h4 {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+#featuered #featuered-wrapper ul li a:link img, #featuered #featuered-wrapper ul li a:visited img {
+  width: 80%;
+  margin: 0 auto;
+}
+#featuered #featuered-wrapper ul li a:link:hover h4, #featuered #featuered-wrapper ul li a:link:active h4, #featuered #featuered-wrapper ul li a:visited:hover h4, #featuered #featuered-wrapper ul li a:visited:active h4 {
+  color: var(--blue);
 }
