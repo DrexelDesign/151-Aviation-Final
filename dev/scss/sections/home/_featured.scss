@@ -7,6 +7,11 @@
 #featuered{
     padding: 24px;
 
+    @include helpers.lg{
+        padding: 48px 24px;
+        padding-bottom: 64px;
+    }  
+
     #featuered-wrapper{
 
         @include helpers.xl{
