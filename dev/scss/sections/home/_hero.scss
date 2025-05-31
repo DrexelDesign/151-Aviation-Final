@@ -1,0 +1,57 @@
+/* =============
+    Home Hero
+============= */
+@use "../../helpers";
+
+
+#home-hero{
+
+    height: 40vh;
+    background: linear-gradient(172deg, rgba(2, 9, 13, 0.70) 43.65%, rgba(13, 63, 100, 0.11) 141.61%);
+    background-color: #02090D;
+    background-color: #0D3F6429;
+    padding: 24px;
+
+    @include helpers.md{
+        padding-top: 48px;
+         height: 50vh;
+    }
+
+    @include helpers.lg{
+        padding-top: 58px;
+        height: 60vh;
+    }
+
+    @include helpers.xl{
+        padding-top: 68px;
+        height: 70vh;
+    }
+
+    #home-hero-wrapper{
+
+        @include helpers.xl{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1{
+            color: var(--white);
+            font-size: helpers.rem-calc(34);
+            text-align: center;
+            font-weight: 500;
+            font-family: "Outfit", sans-serif;
+
+            @include helpers.md{
+                font-size: helpers.rem-calc(60);
+            }
+
+            @include helpers.lg{
+                font-size: helpers.rem-calc(100);
+            }
+         }
+
+        img{
+            width: 100%;
+        }
+    }
+}

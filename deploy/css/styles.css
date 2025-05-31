@@ -986,3 +986,100 @@ footer #footer-content #footer-right #sub-nav {
     -ms-grid-column: 1;
   }
 }
+
+/* =============
+    Home Intro
+============= */
+#home-intro {
+  color: var(--white);
+  padding: 10vh 24px;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+}
+@media (min-width: 768px) {
+  #home-intro {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  #home-intro {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  #home-intro #home-intro-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+#home-intro #home-intro-wrapper p {
+  padding-right: 30vw;
+  font-family: "Outfit", sans-serif;
+}
+@media (min-width: 992px) {
+  #home-intro #home-intro-wrapper p {
+    padding-right: 40vw;
+  }
+}
+@media (min-width: 1200px) {
+  #home-intro #home-intro-wrapper p {
+    padding-right: 30vw;
+  }
+}
+
+/* =============
+    Home Hero
+============= */
+#home-hero {
+  height: 40vh;
+  background: linear-gradient(172deg, rgba(2, 9, 13, 0.7) 43.65%, rgba(13, 63, 100, 0.11) 141.61%);
+  background-color: #02090D;
+  background-color: rgba(13, 63, 100, 0.1607843137);
+  padding: 24px;
+}
+@media (min-width: 768px) {
+  #home-hero {
+    padding-top: 48px;
+    height: 50vh;
+  }
+}
+@media (min-width: 992px) {
+  #home-hero {
+    padding-top: 58px;
+    height: 60vh;
+  }
+}
+@media (min-width: 1200px) {
+  #home-hero {
+    padding-top: 68px;
+    height: 70vh;
+  }
+}
+@media (min-width: 1200px) {
+  #home-hero #home-hero-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+#home-hero #home-hero-wrapper h1 {
+  color: var(--white);
+  font-size: 2.125rem;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif;
+}
+@media (min-width: 768px) {
+  #home-hero #home-hero-wrapper h1 {
+    font-size: 3.75rem;
+  }
+}
+@media (min-width: 992px) {
+  #home-hero #home-hero-wrapper h1 {
+    font-size: 6.25rem;
+  }
+}
+#home-hero #home-hero-wrapper img {
+  width: 100%;
+}

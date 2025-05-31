@@ -1,0 +1,43 @@
+/* =============
+    Home Intro
+============= */
+@use "../../helpers";
+
+
+#home-intro{
+    color: var(--white);
+    padding: 10vh 24px;
+    font-size: helpers.rem-calc(24);
+    line-height: helpers.rem-calc(26);
+
+    @include helpers.md{
+        font-size: helpers.rem-calc(30);
+        line-height: helpers.rem-calc(36);
+    }
+
+    @include helpers.xl{
+        font-size: helpers.rem-calc(48);
+        line-height: helpers.rem-calc(52);
+    }
+
+    #home-intro-wrapper{
+       
+        @include helpers.xl{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        p{
+            padding-right: 30vw;
+            font-family: "Outfit", sans-serif;
+
+            @include helpers.lg{
+                    padding-right: 40vw;
+            }
+
+            @include helpers.xl{
+                    padding-right: 30vw;
+            }
+        }
+    }
+}
