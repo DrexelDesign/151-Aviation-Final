@@ -1,0 +1,53 @@
+/* =============
+    Home Featured
+============= */
+@use "../../helpers";
+
+#explore{
+    background-image: url("../img/home/more-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        text-align: center;
+        h1{
+            color: var(--white);
+            font-weight: 500;
+            font-size: helpers.rem-calc(30);
+            margin-bottom: 32px;
+
+            @include helpers.md{
+                font-size: helpers.rem-calc(40);
+            }
+
+            @include helpers.xl{
+                font-size: helpers.rem-calc(56);
+            }
+        }
+        button{
+            background-color: var(--black);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 12px 24px;
+
+            &:hover{
+                background-color: var(--blue);
+            }
+        }
+
+        a:link, a:visited{
+            background-color: var(--black);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 12px 24px;
+
+            &:hover, &:active{
+                background-color: var(--blue);
+            }
+        }
+    }
+}
