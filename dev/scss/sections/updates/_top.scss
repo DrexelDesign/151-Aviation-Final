@@ -1,0 +1,100 @@
+/* =============
+    Updates Top
+============= */
+@use "../../helpers";
+
+#update-top{
+
+    color: var(--white);
+
+    #update-top-content{
+        padding: 24px;
+
+        @include helpers.md{
+            display: grid;
+            grid-template-columns: 50% auto;
+            gap:16px
+        }
+
+         @include helpers.xl{
+            grid-template-columns: 70% auto;
+            gap:48px;
+            width: 1200px;
+            margin: 0 auto;
+         }
+
+        h2{
+            margin-bottom: 24px;
+            @include helpers.md{
+                    font-size: helpers.rem-calc(28);
+                 }
+        }
+
+        #update-top-left{
+
+            @include helpers.md{
+                border-bottom: solid 1px var(--grey);
+            }
+
+
+            h1{
+                font-size: helpers.rem-calc(30);
+                margin-bottom: 24px;
+                
+                 @include helpers.md{
+                    font-size: helpers.rem-calc(40);
+                 }
+            }
+
+            #avatar{
+                margin: 16px 0;
+                display: flex;
+
+                div{
+                    height: 36px;
+                    width: 36px;
+                    border-radius: 100%;
+                    background-image: url("../img/updates/user.png");
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                section{
+                    margin-left: 16px;
+
+                    h4{
+                        font-size: helpers.rem-calc(14);
+                        font-weight: 400;
+                        color: var(--grey);
+                    }
+                }
+            }
+
+            article{
+                margin: 48px 0;
+            }
+        }
+
+        #update-top-right{
+             border-bottom: solid 1px var(--grey);
+             padding-bottom: 36px;
+
+            #newsletter-hero{
+                background-image: url("../img/updates/newsletter-hero.jpg");
+                background-size: cover;
+                background-position: center;
+                height: 50vh;
+                margin-bottom: 16px;
+                border-radius: 8px;
+
+                @include helpers.md{
+                    height: 30vh;
+                }
+            }
+
+            p{
+                color: var(--grey);
+            }
+        }
+    }
+}

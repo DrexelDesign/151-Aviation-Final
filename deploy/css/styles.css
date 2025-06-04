@@ -1406,3 +1406,98 @@ footer #footer-content #footer-right #sub-nav {
     -ms-grid-column-span: 2;
   }
 }
+
+/* =============
+    Updates Top
+============= */
+#update-top {
+  color: var(--white);
+}
+#update-top #update-top-content {
+  padding: 24px;
+}
+@media (min-width: 768px) {
+  #update-top #update-top-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 16px auto;
+    grid-template-columns: 50% auto;
+    gap: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  #update-top #update-top-content {
+    -ms-grid-columns: 70% 48px auto;
+    grid-template-columns: 70% auto;
+    gap: 48px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+#update-top #update-top-content h2 {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #update-top #update-top-content h2 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  #update-top #update-top-content #update-top-left {
+    border-bottom: solid 1px var(--grey);
+  }
+}
+#update-top #update-top-content #update-top-left h1 {
+  font-size: 1.875rem;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #update-top #update-top-content #update-top-left h1 {
+    font-size: 2.5rem;
+  }
+}
+#update-top #update-top-content #update-top-left #avatar {
+  margin: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#update-top #update-top-content #update-top-left #avatar div {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  background-image: url("../img/updates/user.png");
+  background-size: cover;
+  background-position: center;
+}
+#update-top #update-top-content #update-top-left #avatar section {
+  margin-left: 16px;
+}
+#update-top #update-top-content #update-top-left #avatar section h4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--grey);
+}
+#update-top #update-top-content #update-top-left article {
+  margin: 48px 0;
+}
+#update-top #update-top-content #update-top-right {
+  border-bottom: solid 1px var(--grey);
+  padding-bottom: 36px;
+}
+#update-top #update-top-content #update-top-right #newsletter-hero {
+  background-image: url("../img/updates/newsletter-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  #update-top #update-top-content #update-top-right #newsletter-hero {
+    height: 30vh;
+  }
+}
+#update-top #update-top-content #update-top-right p {
+  color: var(--grey);
+}
