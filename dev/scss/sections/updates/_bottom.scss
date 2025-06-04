@@ -1,0 +1,164 @@
+/* =============
+    Updates Bottom
+============= */
+@use "../../helpers";
+
+#update-bottom{
+    color: var(--white);
+     padding: 24px;
+
+     #update-bottom-content{
+
+        @include helpers.md{
+            display: grid;
+            grid-template-columns: 60% auto;
+            gap:16px
+        }
+
+         @include helpers.xl{
+            grid-template-columns: 70% auto;
+            gap:48px;
+            width: 1200px;
+            margin: 0 auto;
+         }
+
+
+        #update-bottom-left{
+            h2{
+                margin-bottom: 24px;
+                @include helpers.md{
+                    font-size: helpers.rem-calc(28);
+                }
+            }
+
+            ul{
+
+                display: grid;
+                gap: 16px;
+
+                @include helpers.md{
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-areas: 
+                    "ch1 ch1 ch2 ch2"
+                    "... ch3 ch3 ...";
+                }
+
+                @include helpers.xl{
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-areas: 
+                    "ch1 ch2 ch3";
+                }
+
+                li{
+                    div{
+                        height: 30vh;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 8px;
+
+                        @include helpers.md{
+                            height: 15vh;
+                        }
+                    }
+
+                    h3{
+                        font-size: helpers.rem-calc(17);
+                        font-weight: 600;
+                        margin: 14px 0;
+                    }
+
+                    .category{
+                        color: var(--blue);
+                        font-size: helpers.rem-calc(14);
+                        font-weight: 500;
+                        margin-bottom: 14px;
+                    }
+
+                    .date{
+                        color: var(--grey);
+                        font-size: helpers.rem-calc(13);
+                        font-weight: 400;
+                    }
+                }
+
+                #card-hero-1{
+
+                    @include helpers.md{
+                        grid-area: ch1;
+                    }
+
+                    div{
+                        background-image: url("../img/updates/hightlight-1.jpg");
+                    }  
+                }
+
+                #card-hero-2{
+                    @include helpers.md{
+                        grid-area: ch2;
+                    }
+
+                    div{
+                        background-image: url("../img/updates/hightlight-2.jpg");
+                    }
+                }
+
+                #card-hero-3{
+                    @include helpers.md{
+                        grid-area: ch3;
+                    }
+
+                    div{
+                        background-image: url("../img/updates/hightlight-3.jpg");
+                    }
+                }
+            }
+        }
+
+        #update-bottom-right{
+
+            margin-top: 24px;
+
+            @include helpers.md{
+                margin-top: 0;
+            }
+
+            h3{
+                margin: 16px 0;
+                font-weight: 500;
+                font-size: helpers.rem-calc(22);
+            }
+
+            ul{
+                li{
+                    margin-bottom: 24px;
+
+                    p{
+                        color: var(--blue);
+                        font-weight: 500;
+                        font-size: helpers.rem-calc(13);
+                    }
+
+                    div{
+                        margin: 8px 0;
+                        display: flex;
+                        align-items: center;
+                        h4{
+                            font-weight: 500;
+                            font-size: helpers.rem-calc(17);
+                        }
+
+                        i{
+                            margin-left: auto;
+                            color: var(--grey);
+                        }
+                    }
+
+                    .number{
+                        color: var(--grey);
+                    }
+                }
+            }
+        }
+
+     }
+}
